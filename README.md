@@ -3,6 +3,9 @@
 A small, dependency-light PyTorch implementation of a speech LLM, adapted from
 [DeSTA](https://github.com/kehanlu/DeSTA2.5-Audio) for a tutorial.
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kehanlu/interspeech-tutorial/blob/main/example/demo/colab_demo.ipynb)
+Try the two trained checkpoints in Colab (free T4 GPU): no training and no LibriSpeech download.
+
 ```
 audio ──► Whisper-large-v3 encoder ──► adapter ──┐
                                                  ├──► Qwen3-4B-Instruct-2507 (+ LoRA) ──► text
