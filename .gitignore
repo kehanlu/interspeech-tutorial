@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+
+# outputs
+exp/
+results/
+checkpoints/
+wandb/
+lightning_logs/
+
+# manifests written by data/prepare_librispeech.py and generate_vllm.py
+data/Librispeech_task-specific_SFT/
+data/Librispeech-dev-test/
+data/Librispeech_self-generation/

@@ -1,0 +1,51 @@
+# Self-generation training on LibriSpeech.
+
+# model
+llm_id: Qwen/Qwen3-4B-Instruct-2507
+encoder_id: openai/whisper-large-v3
+n_downsample: 2                 # frames merged per token; 2 => 50 fps -> 25 fps
+adapter_hidden_dim: 0           # adapter hidden width; 0 = LLM width
+freeze_encoder: true
+dtype: bfloat16
+gradient_checkpointing: false  # off = fastest; on fits batch 48
+
+# LoRA
+lora_rank: 32
+lora_alpha: 64
+lora_dropout: 0.05
+lora_target_modules: [q_proj, k_proj, v_proj, o_proj]
+
+# data
+train_manifest:                  # a path (ratio 1.0) or {path, ratio}
+  - data/Librispeech_self-generation/train_audiobook_respond.jsonl
+val_manifest:                    # always full; each gets its own val/<name>/loss curve
+  - data/Librispeech-dev-test/dev-clean_asr.jsonl
+  - data/Librispeech-dev-test/dev-clean_gender.jsonl
+audio_root: /path/to/data        # the parent of LibriSpeech/
+batch_size: 10
+num_workers: 8
+max_seq_length: 1024
+max_audio_seconds: 30.0
+
+# optim
+lr: 1.0e-4                 # write 1.0e-4, not 1e-4: PyYAML reads "1e-4" as a string
+encoder_lr: null                 # null = same as lr; ignored when freeze_encoder
+weight_decay: 0.01
+betas: [0.9, 0.98]
+warmup_steps: 500
+
+# trainer
+exp_dir: exp/selfgen
+max_epochs: 3
+max_steps: -1
+devices: 8
+num_nodes: 1
+accumulate_grad_batches: 1
+gradient_clip_val: 1.0
+val_check_interval: 0.25
+log_every_n_steps: 10
+save_every_n_steps: 1000         # rolling latest-*.ckpt for --resume
+keep_best_n_checkpoints: 3       # lowest checkpoint_monitor
+checkpoint_monitor: val/dev-clean_asr/loss   # pick checkpoints by ASR val loss
+wandb_project: desta-tutorial    # empty string = TensorBoard only
+seed: 42
