@@ -1,16 +1,22 @@
-# A minimal SpeechLLM
+# Interspeech 2026 Tutorial
 
-A small, dependency-light PyTorch implementation of a speech LLM, adapted from
-[DeSTA](https://github.com/kehanlu/DeSTA2.5-Audio) for a tutorial.
+## Hands-on Session: Training a Speech-aware LLM without Forgetting
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kehanlu/interspeech-tutorial/blob/main/example/demo/colab_demo.ipynb)
-Try the two trained checkpoints in Colab (free T4 GPU): no training and no LibriSpeech download.
+ Try your own prompt on our fine-tuned checkpoints.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kehanlu/interspeech-tutorial/blob/main/colab_demo.ipynb) [![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)](https://github.com/kehanlu/interspeech-tutorial/blob/main/colab_demo.ipynb)
+
 
 ```
 audio ──► Whisper-large-v3 encoder ──► adapter ──┐
                                                  ├──► Qwen3-4B-Instruct-2507 (+ LoRA) ──► text
 text  ──────────────────────────► embedding table┘
 ```
+
+
+## Table of contents
+
+
 
 Steps below, in order:
 
