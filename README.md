@@ -391,7 +391,7 @@ above measure. To batch several files, pass a list of conversations to `pipe.gen
 
 If you find this tutorial useful, please cite the papers it is based on:
 
-```
+```bibtex
 @ARTICLE{lu2026desta25audio,
 author={Lu, Ke-Han and Chen, Zhehuai and Fu, Szu-Wei and Yang, Chao-Han Huck and Huang, Sung-Feng and Yang, Chih-Kai and Yu, Chee-En and Chen, Chun-Wei and Chen, Wei-Chih and Huang, Chien-yu and Lin, Yi-Cheng and Lin, Yu-Xiang and Fu, Chi-An and Kuan, Chun-Yi and Ren, Wenze and Chen, Xuanjun and Huang, Wei-Ping and Hu, En-Pei and Lin, Tzu-Quan and Wu, Yuan-Kuei and Huang, Kuan-Po and Huang, Hsiao-Ying and Chou, Huang-Cheng and Chang, Kai-Wei and Chiang, Cheng-Han and Ginsburg, Boris and Wang, Yu-Chiang Frank and Lee, Hung-yi},
 journal={IEEE Transactions on Audio, Speech and Language Processing}, 
@@ -404,7 +404,7 @@ keywords={Training;Adaptation models;Metadata;Training data;Speech processing;Mu
 doi={10.1109/TASLPRO.2026.3675792}}
 ```
 
-```
+```bibtex
 @inproceedings{lu2025speechifeval,
   title={{Speech-IFEval}: Evaluating instruction-following and quantifying catastrophic forgetting in speech-aware language models},
   author={Lu, Ke-Han and Kuan, Chun-Yi and Lee, Hung-yi},
@@ -413,7 +413,7 @@ doi={10.1109/TASLPRO.2026.3675792}}
 }
 ```
 
-```
+```bibtex
 @INPROCEEDINGS{Lu2025Developing,
   author={Lu, Ke-Han and Chen, Zhehuai and Fu, Szu-Wei and Yang, Chao-Han Huck and Balam, Jagadeesh and Ginsburg, Boris and Wang, Yu-Chiang Frank and Lee, Hung-Yi},
   booktitle={ICASSP 2025 - 2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
