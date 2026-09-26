@@ -385,3 +385,41 @@ Try the same calls with `asr_gender`: it answers the two task prompts with a bar
 transcript and a bare "male", while `selfgen` tends to answer the plain
 `Transcribe the speech into text` conversationally, which is the pattern the results
 above measure. To batch several files, pass a list of conversations to `pipe.generate`.
+
+
+## Citation
+
+If you find this tutorial useful, please cite the papers it is based on:
+
+```
+@ARTICLE{lu2026desta25audio,
+author={Lu, Ke-Han and Chen, Zhehuai and Fu, Szu-Wei and Yang, Chao-Han Huck and Huang, Sung-Feng and Yang, Chih-Kai and Yu, Chee-En and Chen, Chun-Wei and Chen, Wei-Chih and Huang, Chien-yu and Lin, Yi-Cheng and Lin, Yu-Xiang and Fu, Chi-An and Kuan, Chun-Yi and Ren, Wenze and Chen, Xuanjun and Huang, Wei-Ping and Hu, En-Pei and Lin, Tzu-Quan and Wu, Yuan-Kuei and Huang, Kuan-Po and Huang, Hsiao-Ying and Chou, Huang-Cheng and Chang, Kai-Wei and Chiang, Cheng-Han and Ginsburg, Boris and Wang, Yu-Chiang Frank and Lee, Hung-yi},
+journal={IEEE Transactions on Audio, Speech and Language Processing}, 
+title={DeSTA2.5-Audio: Toward General-Purpose Large Audio Language Model with Self-Generated Cross-Modal Alignment}, 
+year={2026},
+volume={},
+number={},
+pages={1-16},
+keywords={Training;Adaptation models;Metadata;Training data;Speech processing;Music;Keyboards;Buildings;Pipelines;Benchmark testing;Cross-modal alignment;dataset construction;instruction-tuning;large audio language model},
+doi={10.1109/TASLPRO.2026.3675792}}
+```
+
+```
+@inproceedings{lu2025speechifeval,
+  title={{Speech-IFEval}: Evaluating instruction-following and quantifying catastrophic forgetting in speech-aware language models},
+  author={Lu, Ke-Han and Kuan, Chun-Yi and Lee, Hung-yi},
+  booktitle={Interspeech 2025},
+  year={2025}
+}
+```
+
+```
+@INPROCEEDINGS{Lu2025Developing,
+  author={Lu, Ke-Han and Chen, Zhehuai and Fu, Szu-Wei and Yang, Chao-Han Huck and Balam, Jagadeesh and Ginsburg, Boris and Wang, Yu-Chiang Frank and Lee, Hung-Yi},
+  booktitle={ICASSP 2025 - 2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
+  title={Developing Instruction-Following Speech Language Model Without Speech Instruction-Tuning Data}, 
+  year={2025},
+  pages={1-5},
+  doi={10.1109/ICASSP49660.2025.10889444}
+}
+```
